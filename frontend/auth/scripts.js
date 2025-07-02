@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     container.classList.remove("right-panel-active");
   });
 
-  // Base URL for API endpoints
-  const API_BASE_URL = "http://localhost:8080/api/users";
+  // Use environment variable or fallback to localhost for API base URL
+  const API_BASE_URL = window.API_BASE_URL || "http://localhost:8080/api/users";
 
   // Get the message element
   const messageElement = document.getElementById("message");
